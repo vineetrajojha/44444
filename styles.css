@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bolder;
+}
+
+html, body { height: 100%; }
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  overflow: hidden;
+}
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+:root{
+    --bg-color: #F4F7FA;
+    --nav-color: #ffffff;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    padding: 17%;
+}
+
+.hero h1 {
+    font-size: 3.0rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    justify-content: center; /* Center content vertically */
+    width: 200px; /* Increased button width */
+    height: 60px; /* Increased button height */
+    padding: 0; /* Remove padding to fit within new dimensions */
+    margin: 20px auto; /* Center button horizontally */
+    margin-top: 20px; /* Adjust gap from the text above the button */
+    background-color: #3774FF; /* Initial color */
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold; /* Changed to bold for better visibility */
+    font-size: 18px; /* Increased text size */
+    text-align: center; /* Center text horizontally */
+    line-height: 60px; /* Center text vertically within the button */
+    cursor: pointer;
+    border: none; /* Optional: Remove border if needed */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    box-sizing: border-box; /* Ensure padding and border are included in width and height */
+}
+
+.btn:hover {
+    background-color: #2955CC; /* Hover color */
+}
+
+
+
+
